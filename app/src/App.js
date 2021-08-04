@@ -16,6 +16,8 @@ import Header from "./common/Header";
 import SessionPage from "./pages/SessionPage";
 import SpeakerPage from "./pages/SpeakerPage";
 import SpeakerDetails from "./components/SpeakerDetails";
+import AddSession from "./components/AddSession";
+import Footer from "./common/Footer";
 
 //initialize apollo client
 const client = new ApolloClient({
@@ -27,17 +29,19 @@ const client = new ApolloClient({
 });
 
 function AppRouter() {
-  const { url, path } = useRouteMatch();
+  //const { url, path } = useRouteMatch();
 
   return (
     <>
       <Header />
       <Switch>
-        <Route exact path={`${path}/`} component={HomePage} />
+        <Route exact path={`/`} component={HomePage} />
         <Route exact path="/sessions" component={SessionPage} />
+        <Route exact path={`/sessions/addsession`} component={AddSession} />
         <Route exact path="/speakers" component={SpeakerPage} />
         <Route exact path="/speaker/:speaker_id" component={SpeakerDetails} />
       </Switch>
+      <Footer />
     </>
   );
 }
