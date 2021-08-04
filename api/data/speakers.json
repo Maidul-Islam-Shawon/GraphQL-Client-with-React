@@ -37,7 +37,8 @@
           "name": "GraphQL - The Big Picture"
         }
       ],
-      "name": "West Larson"
+      "name": "West Larson",
+      "featured": true
     },
     {
       "id": "1491c981-bbb2-4db3-b89a-3a7434451fed",

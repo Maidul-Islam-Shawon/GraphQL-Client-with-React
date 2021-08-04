@@ -66,7 +66,7 @@ const AddSession = () => {
     return (
       <div>
         Session Created Successfully!{" "}
-        <Link to="/sessions/addsession">Create another session</Link>
+        <a href="/sessions/addsession">Create another session</a>
       </div>
     );
   if (error) return <div>Upps!! Failed to Create a Session!</div>;
