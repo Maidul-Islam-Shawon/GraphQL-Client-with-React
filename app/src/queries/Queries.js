@@ -48,7 +48,7 @@ export const SPEAKER_BY_ID = gql`
   this directieve can be use for the purpose of include/exclude 
   or skip or mark deprecated any fields
 */
-const SessionInfo = gql`
+export const SessionInfo = gql`
   fragment SessionInfo on Session {
     id
     title
@@ -66,15 +66,12 @@ const SessionInfo = gql`
 
 // get all sessions //
 export const ALL_SESSIONS = gql`
-  query SESSION {
-    sessions {
-      id
-      title
-      day
-      room
-      level
+  query SESSION($isDescription: Boolean!) {
+    AllSessions: sessions {
+      ...SessionInfo
     }
   }
+  ${SessionInfo}
 `;
 
 //...define Session query with argument...//

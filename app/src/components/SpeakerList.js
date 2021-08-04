@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { gql, useQuery, useMutation } from "@apollo/client";
 
-//update cache after mutation need to return back id and mutated field
+//To update cache after mutation need to return back id and mutated field
 const FEATURED_SPEAKER = gql`
   mutation markFeatured($speakerId: ID!, $featured: Boolean!) {
     markFeatured(speakerId: $speakerId, featured: $featured) {

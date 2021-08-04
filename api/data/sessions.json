@@ -3678,6 +3678,27 @@
       "level": "Intermediate",
       "day": "Thursday",
       "id": "4b406060-bf02-48b3-9924-518e54cd2c2f"
+    },
+    {
+      "title": "A.A Production",
+      "description": "description",
+      "level": "Introductory and overview",
+      "day": "Wednesday",
+      "id": "5ef773be-e981-4388-b2ac-4ad9dece8ea5"
+    },
+    {
+      "title": "Shawon Test",
+      "description": "asdfsadasd",
+      "level": "Introductory and overview",
+      "day": "Wednesday",
+      "id": "5a2e54ac-4977-4b3a-8202-84c9bda4c5ad"
+    },
+    {
+      "title": "Mark and Holo",
+      "description": "this is test",
+      "level": "Introductory and overview",
+      "day": "Wednesday",
+      "id": "32927629-5f80-4428-8454-3144436ce28d"
     }
   ]
 }

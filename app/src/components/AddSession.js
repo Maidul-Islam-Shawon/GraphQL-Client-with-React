@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Formik, Field, Form } from "formik";
 import { gql, useMutation } from "@apollo/client";
 import { Link, useHistory } from "react-router-dom";
+import { SESSIONS_BY_DAY } from "../queries/Queries";
 
 //mutation to create a new session
 const CREATE_SESSION = gql`
@@ -23,9 +23,27 @@ const AddSession = () => {
     level: "",
   });
 
+  //update cache without refresh
+  const UpdateSessionFunc = (cache, { data }) => {
+    cache.modify({
+      fields: {
+        sessions(existingSessions = []) {
+          const newSession = data.createSession;
+
+          cache.writeQuery({
+            query: SESSIONS_BY_DAY,
+            data: { newSession, ...existingSessions },
+          });
+        },
+      },
+    });
+  };
+
   // Pass mutation to useMutation
   //{called,error} for track a mutation after post
-  const [create, { called, error }] = useMutation(CREATE_SESSION);
+  const [create, { called, error }] = useMutation(CREATE_SESSION, {
+    update: UpdateSessionFunc, //update cache without refresh
+  });
 
   const handleChange = (e) => {
     let name = e.target.name;
@@ -48,7 +66,7 @@ const AddSession = () => {
     return (
       <div>
         Session Created Successfully!{" "}
-        <a href="/sessions/addsession">Create another session</a>
+        <Link to="/sessions/addsession">Create another session</Link>
       </div>
     );
   if (error) return <div>Upps!! Failed to Create a Session!</div>;
