@@ -3657,6 +3657,27 @@
       "level": "Advanced",
       "day": "Fridat",
       "id": "8f231e58-00c4-487b-93a9-ce44c6c46bcf"
+    },
+    {
+      "title": "ASAI Session",
+      "description": "this is asa international session",
+      "level": "Introductory and overview",
+      "day": "Friday",
+      "id": "84fc6da5-0fea-42a3-aeb8-6ba861e5d780"
+    },
+    {
+      "title": "Shawons way of thinking",
+      "description": "This is shawons way of thinking",
+      "level": "Introductory and overview",
+      "day": "Wednesday",
+      "id": "ae27dd75-752b-41b5-962c-e77226f7468b"
+    },
+    {
+      "title": "Joshim was a hero",
+      "description": "This best hero of the world",
+      "level": "Intermediate",
+      "day": "Thursday",
+      "id": "4b406060-bf02-48b3-9924-518e54cd2c2f"
     }
   ]
 }

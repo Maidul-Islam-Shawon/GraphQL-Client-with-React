@@ -1,5 +1,5 @@
 import React from "react";
-import { gql, useQuery } from "@apollo/client";
+import { gql, useQuery, useMutation } from "@apollo/client";
 import SpeakerList from "../components/SpeakerList";
 import { ALL_SPEAKERS } from "../queries/Queries";
 
@@ -23,7 +23,7 @@ const SpeakerPage = () => {
   console.log(data);
 
   function loadSpeakerData() {
-    if (loading) return <div>Sessions are loading...</div>;
+    if (loading) return <div>Speakres are loading...</div>;
     if (error)
       return <div>Speakers could not load, some error occured!...</div>;
 

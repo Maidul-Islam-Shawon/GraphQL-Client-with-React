@@ -48,7 +48,8 @@
           "name": "Rapid Cross-Platform AR Development with React Native"
         }
       ],
-      "name": "Xoan Chapman"
+      "name": "Xoan Chapman",
+      "featured": true
     },
     {
       "id": "223d2b9d-a582-4e14-bebb-d636fb030bda",
@@ -70,7 +71,8 @@
           "name": "Building a QA practice from scratch"
         }
       ],
-      "name": "Ripley Vargas"
+      "name": "Ripley Vargas",
+      "featured": true
     },
     {
       "id": "e8eb22dd-d167-4efa-ba0e-905c94b38f9b",
@@ -96,7 +98,8 @@
           "name": "Stack-Agnostic End-to-End Testing with Jest and Puppeteer"
         }
       ],
-      "name": "Travis Oliver"
+      "name": "Travis Oliver",
+      "featured": true
     },
     {
       "id": "67825076-cfd8-40ab-a163-bf9d9cea66bf",

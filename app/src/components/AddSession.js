@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Formik, Field, Form } from "formik";
 import { gql, useMutation } from "@apollo/client";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 //mutation to create a new session
 const CREATE_SESSION = gql`
@@ -24,7 +24,8 @@ const AddSession = () => {
   });
 
   // Pass mutation to useMutation
-  const [create, read] = useMutation(CREATE_SESSION);
+  //{called,error} for track a mutation after post
+  const [create, { called, error }] = useMutation(CREATE_SESSION);
 
   const handleChange = (e) => {
     let name = e.target.name;
@@ -38,10 +39,19 @@ const AddSession = () => {
 
     //passing variables for mutation
     create({ variables: { session: state } });
-    history.push("/sessions");
+    //history.push("/sessions");
   };
 
   //console.log("created data", read.data);
+
+  if (called)
+    return (
+      <div>
+        Session Created Successfully!{" "}
+        <a href="/sessions/addsession">Create another session</a>
+      </div>
+    );
+  if (error) return <div>Upps!! Failed to Create a Session!</div>;
 
   return (
     <div className="container">
@@ -108,7 +118,7 @@ const AddSession = () => {
             </div>
           </div>
 
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn btn-info">
             Create
           </button>
         </form>
