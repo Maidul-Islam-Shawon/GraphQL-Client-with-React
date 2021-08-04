@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { gql, useQuery } from "@apollo/client";
 import SessionList from "../components/SessionList";
 import { SESSIONS_BY_DAY } from "../queries/Queries";
+import { Link } from "react-router-dom";
 
 // const ALL_SESSIONS = gql`
 //   query SESSION {
@@ -51,7 +52,7 @@ const SessionPage = () => {
     variables: { day, isDescription },
   });
 
-  console.log("data:", data);
+  //console.log("data:", data);
 
   function loadSessionData() {
     if (loading) return <div>Sessions are loading...</div>;
@@ -88,10 +89,13 @@ const SessionPage = () => {
   return (
     <div className="container">
       <h2>All Sesssion</h2>
+      <Link type="button" className="btn btn-primary" to="/sessions/addsession">
+        Create
+      </Link>
       <div className="dayButtons">
         <button
           type="button"
-          className="btn btn-primary"
+          className="btn btn-info"
           onClick={() => setDay("Wednesday")}
         >
           Wednesday
