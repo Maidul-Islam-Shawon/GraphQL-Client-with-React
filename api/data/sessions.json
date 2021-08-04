@@ -3630,6 +3630,33 @@
       "level": "Intermediate",
       "day": "Thursday",
       "id": "814b1f5e-e6df-440b-a91c-df198b5bbed2"
+    },
+    {
+      "title": "AAmar Session",
+      "description": "This session is for testing purpose only",
+      "day": "Wednesday",
+      "id": "00368eea-60a7-433e-bff7-620e05505c65"
+    },
+    {
+      "title": "GraphQl, a alternative solution of REST ",
+      "description": "Can graphQL takeover rest api, it is a big querstion now let see if it can.",
+      "level": "Introductory and overview",
+      "day": "Wednesday",
+      "id": "02532bd3-d60e-4bf1-a08e-1d406a63c5c2"
+    },
+    {
+      "title": "Apollo with GraphQL",
+      "description": "Apollo with GraphQL is a great combination.",
+      "level": "Intermediate",
+      "day": "Thursday",
+      "id": "926a88e0-8713-4b3a-9384-cac1ef394cd7"
+    },
+    {
+      "title": "ASA International",
+      "description": "A microfinance company.",
+      "level": "Advanced",
+      "day": "Fridat",
+      "id": "8f231e58-00c4-487b-93a9-ce44c6c46bcf"
     }
   ]
 }
